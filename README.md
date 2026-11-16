@@ -87,13 +87,13 @@ npm run start:gateway
 
 ## Configuration
 
-| Variable | Description | Default |
-|---|---|---|
-| `OTEL_EXPORTER_OTLP_ENDPOINT` | Base URL of the OTLP receiver (APM Server) | `http://localhost:4318` |
-| `OTEL_EXPORTER_OTLP_PROTOCOL` | OTLP transport protocol | `http/protobuf` |
-| `DOCKER_CHECKER_URL` | URL the gateway uses to reach docker-checker | `http://localhost:3001` |
-| `OTEL_SERVICE_NAME` | Service name shown in Kibana (set by each npm script) | — |
-| `PORT` | HTTP port of each service (set by each npm script) | `3000` / `3001` |
+| Variable                      | Description                                           | Default                 |
+| ----------------------------- | ----------------------------------------------------- | ----------------------- |
+| `OTEL_EXPORTER_OTLP_ENDPOINT` | Base URL of the OTLP receiver (APM Server)            | `http://localhost:4318` |
+| `OTEL_EXPORTER_OTLP_PROTOCOL` | OTLP transport protocol                               | `http/protobuf`         |
+| `DOCKER_CHECKER_URL`          | URL the gateway uses to reach docker-checker          | `http://localhost:3001` |
+| `OTEL_SERVICE_NAME`           | Service name shown in Kibana (set by each npm script) | —                       |
+| `PORT`                        | HTTP port of each service (set by each npm script)    | `3000` / `3001`         |
 
 ## Exploring the data
 
@@ -117,7 +117,7 @@ src/
 
 ## Roadmap
 
-- [ ] Query the real Docker socket in `docker-checker` (currently returns mock data)
+- [x] Query the real Docker socket in `docker-checker` (currently returns mock data)
 - [ ] `http-checker`: probe local APIs (status code, latency)
 - [ ] `network-checker`: reachability of devices on the LAN
 - [ ] React dashboard instrumented with OpenTelemetry for the browser
